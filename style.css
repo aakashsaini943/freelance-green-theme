@@ -905,3 +905,73 @@ p  { line-height: 1.7; color: var(--text-body); }
   .newsletter-form input, .newsletter-form .btn { width: 100%; border-radius: var(--radius-sm); }
   .hero-btns { flex-direction: column; align-items: flex-start; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== MOBILE HERO CENTER ALIGN ONLY ===== */
+
+@media (max-width:768px){
+
+  .hero-content{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero-label{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-desc{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns{
+    justify-content: center;
+  }
+
+
+    .hero-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .hero-btns .btn{
+    width: auto;
+    min-width: 145px;
+    padding: 14px 18px;
+    font-size: .85rem;
+    white-space: nowrap;
+  }
+
+}
