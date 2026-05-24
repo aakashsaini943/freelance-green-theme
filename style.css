@@ -908,28 +908,6 @@ p  { line-height: 1.7; color: var(--text-body); }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ===== MOBILE HERO CENTER ALIGN ONLY ===== */
 
 @media (max-width:768px){
@@ -974,4 +952,112 @@ p  { line-height: 1.7; color: var(--text-body); }
     white-space: nowrap;
   }
 
+    .nav-cta{
+    display: none !important;
+  }
+
+
 }
+
+
+/* ===== WATER DROP GLOW EFFECT ===== */
+
+.hero{
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-label{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 5;
+}
+
+.live-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4dff88;
+
+  position: relative;
+  z-index: 10;
+
+  animation: dotBlink 2s infinite;
+}
+
+/* WATER REFLECTION */
+/* MORE STRONG WATER REFLECTION */
+
+.live-dot::before{
+  content: "";
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background: rgba(77,255,136,.22);
+
+  box-shadow:
+    0 0 160px rgba(77,255,136,.40),
+    0 0 320px rgba(77,255,136,.32),
+    0 0 520px rgba(77,255,136,.24),
+    0 0 900px rgba(77,255,136,.18);
+
+  animation: waterRipple 2s infinite;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes dotBlink{
+
+  0%,100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50%{
+    opacity: .6;
+    transform: scale(1.2);
+  }
+
+}
+
+@keyframes waterRipple{
+
+  0%{
+    width: 20px;
+    height: 20px;
+    opacity: .35;
+  }
+
+  70%{
+    width: 120vw;
+    height: 120vw;
+    opacity: .05;
+  }
+
+  100%{
+    width: 140vw;
+    height: 140vw;
+    opacity: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
